@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beacon — Shared Location</title>
+</head>
+<body>
+  <p>Opening Beacon&hellip;</p>
 
+  <script>
+    (function () {
+      // The shared location data arrives as a query parameter, e.g.:
+      // https://shamehthi96-ux.github.io/share/?data=<base64-encoded-json>
+      var params = new URLSearchParams(window.location.search);
+      var data = params.get('data');
+
+      var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.pastelfiya.beacon';
+
+      if (data) {
+        // Pass the same data through as the Play Store referrer so the app
+        // can read it via the Play Install Referrer API on first launch.
+        playStoreUrl += '&referrer=' + encodeURIComponent(data);
+      }
+
+      // If we're still executing this script, Android did NOT intercept the
+      // link with the app (app link verification failed or app isn't
+      // installed) — so send the person to the Play Store.
+      window.location.replace(playStoreUrl);
+    })();
+  </script>
+</body>
+</html>
