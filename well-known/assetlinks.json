@@ -1,1 +1,0 @@
-[ { "relation": ["delegate_permission/common.handle_all_urls"], "target": { "namespace": "android_app", "package_name": "com.pastelfiya.beacon", "sha256_cert_fingerprints": [ "29:E1:21:C2:8A:2B:1F:8E:71:CA:D0:E6:FD:5E:14:3D:14:D3:8E:A1:EC:4A:2C:6B:F9:3F:99:71:97:40:33:60", "FE:7B:2C:9F:D7:AB:EE:4A:99:0A:60:D8:94:E4:B0:24:A3:E1:C7:01:7F:AC:AC:92:09:B0:06:A4:07:E9:F2:D1" ] } } ]
