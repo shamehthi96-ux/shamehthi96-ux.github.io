@@ -1,1 +1,24 @@
-
+<!-- quranreel/verse/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quran Reel</title>
+  <script>
+    const parts = window.location.pathname.split('/');
+    const verseId = parts[parts.length - 1];
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('deep-link').href =
+        'https://shamehthi96-ux.github.io/quranreel/verse/' + verseId;
+    });
+  </script>
+</head>
+<body style="text-align:center; font-family:sans-serif; padding:40px;">
+  <h2>Open this verse in Quran Reel</h2>
+  <p>
+    <a href="https://play.google.com/store/apps/details?id=com.pastelfiya.quranreel">
+      Get Quran Reel on Google Play
+    </a>
+  </p>
+</body>
+</html>
