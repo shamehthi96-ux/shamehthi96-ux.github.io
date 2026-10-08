@@ -1,1 +1,24 @@
-[ { "relation": ["delegate_permission/common.handle_all_urls"], "target": { "namespace": "android_app", "package_name": "com.pastelfiya.beacon", "sha256_cert_fingerprints": [ "29:E1:21:C2:8A:2B:1F:8E:71:CA:D0:E6:FD:5E:14:3D:14:D3:8E:A1:EC:4A:2C:6B:F9:3F:99:71:97:40:33:60", "FE:7B:2C:9F:D7:AB:EE:4A:99:0A:60:D8:94:E4:B0:24:A3:E1:C7:01:7F:AC:AC:92:09:B0:06:A4:07:E9:F2:D1" ] } } ] 
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pastelfiya.beacon",
+      "sha256_cert_fingerprints": [
+        "29:E1:21:C2:8A:2B:1F:8E:71:CA:D0:E6:FD:5E:14:3D:14:D3:8E:A1:EC:4A:2C:6B:F9:3F:99:71:97:40:33:60",
+        "FE:7B:2C:9F:D7:AB:EE:4A:99:0A:60:D8:94:E4:B0:24:A3:E1:C7:01:7F:AC:AC:92:09:B0:06:A4:07:E9:F2:D1"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pastelfiya.quranreel",
+      "sha256_cert_fingerprints": [
+        "D5:57:3A:5E:03:B9:E1:98:16:F7:50:AF:AD:82:4B:3F:C0:D8:D8:A7:35:3E:AB:06:BA:AF:CC:16:9C:17:F6:A3",
+        "98:5B:19:E4:22:EA:8F:81:73:02:DB:47:56:6B:E0:BA:E4:57:FD:6D:8B:07:9C:02:78:8F:71:67:87:10:42:F8"
+      ]
+    }
+  }
+]
