@@ -2,22 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quran Reel — Verse</title>
 </head>
-<body>
-  <p>Opening verse… if nothing happens, <a id="deep-link" href="#">tap here</a>.</p>
+<body style="font-family: sans-serif; text-align: center; padding: 40px; background: #0b1a13; color: #fff;">
+  <h2>Opening Ayah in Quran Reel...</h2>
+  <p>If the app does not open automatically:</p>
+  <p>
+    <a id="app-link" href="#" style="display:inline-block; padding:12px 24px; background:#D4AF37; color:#0b1a13; text-decoration:none; border-radius:8px; font-weight:bold;">
+      Open in Quran Reel App
+    </a>
+  </p>
+  <p style="margin-top: 20px;">
+    <a id="play-store-link" href="https://play.google.com/store/apps/details?id=com.pastelfiya.quranreel" style="color: #88c0a7; text-decoration: underline;">
+      Get Quran Reel on Google Play
+    </a>
+  </p>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const verseId = params.get('v');
-    document.addEventListener('DOMContentLoaded', () => {
-      if (verseId) {
-        document.getElementById('deep-link').href =
-          'https://shamehthi96-ux.github.io/quranreel/verse/' + verseId;
-        // Uncomment the next line if you want it to redirect automatically
-        // instead of waiting for a tap:
-        // window.location.replace(document.getElementById('deep-link').href);
-      }
-    });
+    if (verseId) {
+      const customSchemeUrl = 'quranreel://verse/' + verseId;
+      document.getElementById('app-link').href = customSchemeUrl;
+      // Attempt to launch the app via custom scheme
+      window.location.href = customSchemeUrl;
+    }
   </script>
 </body>
 </html>
