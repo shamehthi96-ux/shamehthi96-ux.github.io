@@ -1,29 +1,23 @@
-<!-- 404.html — place at the REPO ROOT, not inside the quranreel folder -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <script>
-    // GitHub Pages serves this file for any unmatched path.
-    // If the path looks like our verse deep link, redirect to the real page.
-    const path = window.location.pathname;
-    if (path.startsWith('/quranreel/verse/')) {
-      window.location.replace(
-        'https://shamehthi96-ux.github.io/quranreel/verse/index.html' +
-        '?v=' + path.split('/').pop()
-      );
-    }
-  </script>
+  <title>Quran Reel — Verse</title>
 </head>
 <body>
-  <p>Redirecting…</p>
+  <p>Opening verse… if nothing happens, <a id="deep-link" href="#">tap here</a>.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const verseId = params.get('v');
+    document.addEventListener('DOMContentLoaded', () => {
+      if (verseId) {
+        document.getElementById('deep-link').href =
+          'https://shamehthi96-ux.github.io/quranreel/verse/' + verseId;
+        // Uncomment the next line if you want it to redirect automatically
+        // instead of waiting for a tap:
+        // window.location.replace(document.getElementById('deep-link').href);
+      }
+    });
+  </script>
 </body>
 </html>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const verseId = params.get('v');
-  document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('deep-link').href =
-      'https://shamehthi96-ux.github.io/quranreel/verse/' + verseId;
-  });
-</script>
